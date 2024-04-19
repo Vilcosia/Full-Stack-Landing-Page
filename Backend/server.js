@@ -5,10 +5,8 @@ const db = require("./Config/db");
 const app = express();
 
 //impot classes
-//const routes = require("./routes/routes");
-// const userRoute = require("./routes/userRoute");
-// const clientRoute = require("./routes/clientRoute");
-// const invoiceRoute = require("./routes/invoiceRoute");
+const userRoute = require("./Routes/userRoute");
+
 
 var corsOptions = {
     origin: "*"
@@ -27,6 +25,4 @@ if(db)
 {
     console.log("Database is connected");
 }
-// app.use('/api/user', userRoute);
-// app.use('/api/client',clientRoute);
-// app.use('/api/invoice',invoiceRoute);
+app.use('/api/user', userRoute);
