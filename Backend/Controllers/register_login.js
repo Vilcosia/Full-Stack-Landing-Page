@@ -94,49 +94,7 @@ exports.login =  (req, res)=>{
     })  
 }
 
-exports.getOneUser = (req, res) => {
-
-    const user_id = req.params.user_id;
-
-    const sql = 'SELECT * FROM users WHERE user_id = $1';
-    db.query(sql,[user_id],(err, results)=>{
-        if(err) { res.status(400).json({message:'Query failed'}) }else{
-            res.status(200).json(results.rows[0]);
-        }
-    })
-}
 
 
 
-exports.updateUser = async (req, res)=>{
-   
-    const user_id = req.params.user_id;
-    const { password ,firstname ,lastname} = req.body;
-  
-    db.query(
-      'UPDATE users SET password = $1 ,firstname = $2, lastname = $3 WHERE user_id = $5',
-        [password ,firstname ,lastname , user_id],
-       (error,results) => {
-        if (error) {
-            res.status(400).json({message:'Query failed'});
-        }else {res.status(200).json({message:'Your profile was updated successfully'});}
-    
-      })
-}
 
-exports.updateImage = async (req,res) => {
-    //console.log(req.body.link)
-
-    const link = req.body.link;
-    const user_id = req.params.user_id;
-
-    db.query('UPDATE users SET image = $1 WHERE user_id = $2',[link,user_id],(err,results)=>{
-        if(err){
-            res.status(400).json({message:err.message});
-        }else
-        {
-            res.status(200).json({message:'Your profile picture was updated successfully'});
-        }
-
-    })
-}
