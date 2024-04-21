@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+/* tslint:disable:no-unused-variable */
 
+import { TestBed, async, inject } from '@angular/core/testing';
 import { JwtService } from './jwt.service';
 
-describe('JwtService', () => {
-  let service: JwtService;
-
+describe('Service: Jwt', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(JwtService);
+    TestBed.configureTestingModule({
+      providers: [JwtService]
+    });
   });
 
-  it('should be created', () => {
+  it('should ...', inject([JwtService], (service: JwtService) => {
     expect(service).toBeTruthy();
-  });
+  }));
 });

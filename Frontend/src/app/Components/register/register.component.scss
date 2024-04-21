@@ -1,0 +1,50 @@
+//body{background-color:#FFEBEE}
+.card{width:400px;background-color:#fff;border:none;border-radius: 12px}
+
+.form-control{
+    margin-top: 10px;
+    height: 48px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    background-color: #CFBD1C;
+    color:black;
+    display: flex;
+    
+}
+.information{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.has-success{
+    border-color: green;
+
+  }
+
+  .help-block{
+    color: red;
+    padding-left: 0%;
+    font-size: 1rem;
+    margin-top: 0rem;
+    width: 100%;
+    margin-left: 0%;
+
+  }
+
+  .er{
+
+    margin-left: 0rem;
+    margin-bottom: 0%;
+    font-size: 80%;
+
+    margin-top: 3rem;
+  }
+
+  .er{
+    float: left;
+    margin-left: 0rem;
+    margin-bottom: 0%;
+    color: red;
+  }   
+
+

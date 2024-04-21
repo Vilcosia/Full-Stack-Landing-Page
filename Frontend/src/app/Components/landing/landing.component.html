@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation Nexis</title>
+   
+</head>
+
+
+<div class ="body" >
+    <nav>
+
+        
+        <ul>
+            <img width="100px" height="auto" src="https://innonexis.tech/images/Inn.PNG">
+            <li><a href="#" position-absolute>Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Competition</a></li>
+            <li><a href="#">Login/Register</a></li>
+            
+        </ul>
+    </nav>
+
+    <div class="heading justify-center">
+        <h1 class="welcome">
+            Welcome To  
+        <span>Innovation Nexis</span>
+    </h1>
+    </div>
+
+   
+
+    <div class="container">
+        <div class="card">
+            <h2>Win a PS4 Competition</h2>
+            
+            <div class="slider">
+            
+                <img class="image" src="https://media.istockphoto.com/id/687958304/photo/sony-play-station-4-and-dualshock-video-game-console.jpg?s=612x612&w=0&k=20&c=TjYQMjUchhSuoWd9P3z4XE-E_QddhruFMKVq644RmIE=">
+                
+            </div>
+            <p>Join our exciting PS4 gaming competition and stand a chance to win amazing prizes!</p>
+        </div>
+
+        <div class="card">
+            <h2>Learning Portal</h2>
+            <div class="slider">
+                <img class ="image"src="https://tse2.mm.bing.net/th?id=OIP.lUCAOwNpL8abvhMt5HPiZQHaFj&pid=Api&P=0&h=220">
+               
+                <!-- Add more images here -->
+            </div>
+            <p>Explore our educational resources and enhance your skills!</p>
+            <!-- Add links and descriptions here -->
+        </div>
+
+        <div class="card">
+            <h2>Upcoming Event</h2>
+
+            <div class="slider">
+                <img class = "image" src="https://tse3.mm.bing.net/th?id=OIP.BCZet2U1lOAlbGYlIUVLjAHaD4&pid=Api&P=0&h=220">
+            </div>
+            <p>Save the date for our next big event! Stay tuned for more details.</p>
+            <!-- Add event information here -->
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Sliding Images
+        const sliders = document.querySelectorAll('.slider');
+
+        sliders.forEach(slider => {
+            let index = 0;
+            const images = slider.querySelectorAll('img');
+            setInterval(() => {
+                images[index].style.transform = 'translateX(-100%)';
+                index = (index + 1) % images.length;
+                images[index].style.transform = 'translateX(0)';
+            }, 3000); // Change slide every 3 seconds
+        });
+    </script>
+
+</div>
+
+</html>

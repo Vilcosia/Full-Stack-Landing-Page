@@ -6,9 +6,10 @@ import { RegisterComponent } from './Components/register/register.component';
 
 
 export const routes: Routes = [
+    {path:'',component:LandingComponent},
     {path:'login',component:LoginComponent},
     {path:'register',component:RegisterComponent},
-    {path:'landing',component:LandingComponent},
+    
   
 ];
 
@@ -17,3 +18,6 @@ export const routes: Routes = [
     exports: [RouterModule]
   })
   export class AppRoutingModule { }
+
+
+  

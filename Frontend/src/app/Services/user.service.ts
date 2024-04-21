@@ -13,4 +13,32 @@ export class UserService {
 
   constructor(private http :HttpClient) { }
 
+  updateStatus(data:any)
+  {
+    return this.http.patch(this.baseUrl+'/updateStatus',data);
+
+  }
+
+  
+   updateProfile(user_id:any ,form:any)
+   {
+    return this.http.patch(this.baseUrl+'/update/'+user_id,form);
+
+   }
+
+  
+  getOneUser(user_id:any)
+  {
+    return this.http.get(this.baseUrl+'/getOneUser/'+user_id);
+  }
+
+  addClient(data:any){
+    return this.http.post(this.baseUrl+'/client',data)
+
+  }
+
+
+
+
+  
 }
